@@ -43,6 +43,12 @@ Workspace >> boards [
 	^ boards
 ]
 
+{ #category : 'boards' }
+Workspace >> deleteBoard: aBoard [
+	boards remove: aBoard ifAbsent: [ ].
+	self saveToFile.
+]
+
 { #category : 'initialization' }
 Workspace >> initialize [
 	super initialize.

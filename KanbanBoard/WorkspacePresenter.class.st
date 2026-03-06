@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'workspace',
 		'boardList',
-		'newBoardButton'
+		'newBoardButton',
+		'deleteBoardButton'
 	],
 	#classVars : [
 		'CurrentWorkspace'
@@ -49,7 +50,23 @@ WorkspacePresenter >> defaultLayout [
 	^ SpBoxLayout newTopToBottom
 		add: boardList;
 		add: newBoardButton;
+		add: deleteBoardButton;
 		yourself
+]
+
+{ #category : 'actions' }
+WorkspacePresenter >> deleteSelectedBoard [
+
+	| selectedBoard |
+	selectedBoard := boardList selectedItem.
+
+	selectedBoard ifNil: [ ^ self inform: 'Select a board first.' ].
+
+	(self confirm: 'Delete board "', selectedBoard name, '"?')
+		ifFalse: [ ^ self ].
+
+	workspace deleteBoard: selectedBoard.
+	self refreshBoards.
 ]
 
 { #category : 'initialization' }
@@ -72,6 +89,10 @@ WorkspacePresenter >> initializePresenters [
     newBoardButton := self newButton.
     newBoardButton label: 'New Board'.
     newBoardButton action: [ self createBoard ].
+
+	deleteBoardButton := self newButton.
+	deleteBoardButton label: 'Delete Board'.
+	deleteBoardButton action: [ self deleteSelectedBoard ].
 ]
 
 { #category : 'initialization' }
