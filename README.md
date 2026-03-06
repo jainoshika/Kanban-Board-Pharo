@@ -59,5 +59,5 @@ Architecture: **Model–Presenter Pattern**
     KanbanApp open
   ```
 3. Default Credentials:
-  - Admin: `admin`  
+  - Admin: `admin123`  
   - Password: `admin123`
