@@ -1,7 +1,6 @@
-# Kanban Board (Pharo)
+# Kanban Board
 
-A simple **Kanban board desktop application** built using **Pharo** and the **Spec2 UI framework**.  
-The project demonstrates object-oriented design, authentication, task management, and data persistence using **STON**.
+A simple **Kanban board desktop application** built using **Pharo** and the **Spec2 UI framework**. The project demonstrates object-oriented design, authentication, task management, and data persistence using **STON**.
 
 ### Demo
 
@@ -19,7 +18,6 @@ After login, users access a workspace that contains multiple Kanban boards. Each
 Users can:
 - Create, open and delete boards
 - Manage tasks within each board
-- Track progress across workflow stages
 
 ### Task Workflow Management
 
@@ -28,7 +26,6 @@ Users can:
 - Create new tasks
 - Move tasks between columns
 - Delete completed or unnecessary tasks
-The interface updates automatically when tasks are modified.
 
 ### Task Priorities
 
@@ -42,7 +39,6 @@ Tasks support priority levels which are visually represented using colors. This 
 The application uses **STON (Smalltalk Object Notation)** for local data persistence. The system automatically:
 - Saves workspace state when tasks or boards change
 - Restores data when the application starts again
-All data is stored in a local `kanban.ston` file.
 
 ## Technical Specifications
 
@@ -61,3 +57,15 @@ Architecture: **Model–Presenter Pattern**
 3. Default Credentials:
   - Admin: `admin123`  
   - Password: `admin123`
+    
+## LLM Support
+
+LLM (ChatGPT) was used during the development of this project mainly to learn the Pharo environment and explore possible approaches.
+- It helped generate an initial example for the `Task` class.
+- It was used to understand Pharo syntax and the design of frontend classes such as `WorkspacePresenter`.
+- It helped in understanding how STON serialization works.
+- It was also used while exploring how the priority color feature could be implemented.
+
+After understanding these patterns, most of the remaining classes and features were implemented by following the same structure. Once the design was clear, implementing the backend models (Task, Column, Board, etc.) and the presenters became fairly repetitive.
+
+LLM support was mainly used as a learning aid while getting familiar with the Pharo ecosystem.
