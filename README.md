@@ -1,6 +1,9 @@
-## A Kanban Board Built Using Pharo & Spec2 UI Framework
+# A Kanban Board Built Using Pharo
 
-### Why this Project?
+[![Pharo Version](https://img.shields.io/badge/Pharo-14+-blue)](https://pharo.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+## Why this Project?
 
 I built this to:
 - Master Pharo's syntax and environment through practical implementation
@@ -11,7 +14,7 @@ I built this to:
 
 https://github.com/user-attachments/assets/66837456-769b-4014-8d9e-c7d1e0e33e4c
 
-### Core Implementation
+## Core Implementation
 
 - User authentication with login and signup flow
 - Workspace supporting multiple Kanban boards which can be created, opened and deleted
@@ -27,7 +30,7 @@ https://github.com/user-attachments/assets/66837456-769b-4014-8d9e-c7d1e0e33e4c
 - Data Format: STON
 - Architecture: Model–Presenter Pattern
 
-### Installation
+## Installation
 
 **Option 1: Using Metacello (Recommended)**
 
