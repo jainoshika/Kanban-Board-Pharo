@@ -1,1 +1,1 @@
-Package { #name : #KanbanBoard-Tests }
+Package { #name : 'KanbanBoard-Tests' }
