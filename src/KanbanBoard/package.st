@@ -1,1 +1,1 @@
-Package { #name : 'KanbanBoard' }
+Package { #name : #KanbanBoard }
